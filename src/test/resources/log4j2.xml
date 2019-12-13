@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%-8t]  %-6level %-32logger - %msg%n" />
+		</Console>
+		<File name="File" fileName="doip-logging.log">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%-8t]  %-6level %-32logger - %msg%n" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="doip" level="trace" additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+		</Root> 
+	</Loggers>
+</Configuration>

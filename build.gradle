@@ -1,0 +1,39 @@
+apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+apply plugin: 'eclipse'
+
+group = 'doip.logging'
+version = '1.0.0'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.2'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.2'
+	
+	testImplementation 'junit:junit:4.12'
+}
+
+test {
+	systemProperty 'log4j.configurationFile', 'src/test/resources/log4j2.xml'
+}
+
+publishing {
+	repositories {
+		maven {
+			name = 'GitHubPackages'
+			url = uri("https://maven.pkg.github.com/doip/doip-logging")
+			credentials {
+				username = findProperty("github.username")
+				password = findProperty("github.token")
+			}
+		}
+	}
+	publications {
+		gpr(MavenPublication) {
+			from(components.java)
+		}
+	}
+}
