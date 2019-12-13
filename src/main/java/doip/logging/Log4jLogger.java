@@ -46,4 +46,9 @@ class Log4jLogger implements Logger {
 	public void log(Level level, String message) {
 		this.logger.log(level.getLog4jLevel(), message);
 	}
+
+	@Override
+	public boolean isTraceEnabled() {
+		return this.logger.isTraceEnabled();
+	}
 }
