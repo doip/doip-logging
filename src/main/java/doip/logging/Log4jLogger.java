@@ -41,4 +41,9 @@ class Log4jLogger implements Logger {
 	public void fatal(String message) {
 		this.logger.fatal(message);
 	}
+
+	@Override
+	public void log(Level level, String message) {
+		this.logger.log(level.getLog4jLevel(), message);
+	}
 }
