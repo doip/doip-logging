@@ -20,20 +20,3 @@ test {
 	systemProperty 'log4j.configurationFile', 'src/test/resources/log4j2.xml'
 }
 
-publishing {
-	repositories {
-		maven {
-			name = 'GitHubPackages'
-			url = uri("https://maven.pkg.github.com/doip/doip-logging")
-			credentials {
-				username = findProperty("github.username")
-				password = findProperty("github.token")
-			}
-		}
-	}
-	publications {
-		gpr(MavenPublication) {
-			from(components.java)
-		}
-	}
-}
