@@ -2,7 +2,7 @@ apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 apply plugin: 'eclipse'
 
-group = 'doip.logging'
+group = 'com.github.doip'
 version = '1.0.0'
 
 repositories {
