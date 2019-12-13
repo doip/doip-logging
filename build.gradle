@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'eclipse'
 
 group = 'com.github.doip'
-version = '1.0.0'
+version = '1.0.1'
 
 repositories {
 	jcenter()
