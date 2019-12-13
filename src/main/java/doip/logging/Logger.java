@@ -16,4 +16,6 @@ public interface Logger {
 	public void error(String message);
 
 	public void fatal(String message);
+	
+	public void log(Level level, String message);
 }
