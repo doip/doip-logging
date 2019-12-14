@@ -1,6 +1,8 @@
 package doip.logging;
 
 public class Level {
+	
+	public static Level INFO = new Level(org.apache.logging.log4j.Level.INFO);
 
 	private org.apache.logging.log4j.Level log4jLevel = null;
 	

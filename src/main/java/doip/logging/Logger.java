@@ -20,4 +20,8 @@ public interface Logger {
 	public void log(Level level, String message);
 	
 	public boolean isTraceEnabled();
+	
+	public boolean isDebugEnabled();
+	
+	public boolean isInfoEnabled();
 }
