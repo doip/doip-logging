@@ -61,4 +61,19 @@ class Log4jLogger implements Logger {
 	public boolean isInfoEnabled() {
 		return this.logger.isInfoEnabled();
 	}
+
+	@Override
+	public boolean isErrorEnabled() {
+		return this.logger.isErrorEnabled();
+	}
+
+	@Override
+	public boolean isWarnEnabled() {
+		return this.logger.isWarnEnabled();
+	}
+
+	@Override
+	public boolean isFatalEneabled() {
+		return this.logger.isFatalEnabled();
+	}
 }

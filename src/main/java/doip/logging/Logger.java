@@ -24,4 +24,10 @@ public interface Logger {
 	public boolean isDebugEnabled();
 	
 	public boolean isInfoEnabled();
+	
+	public boolean isWarnEnabled();
+	
+	public boolean isErrorEnabled();
+	
+	public boolean isFatalEneabled();
 }
